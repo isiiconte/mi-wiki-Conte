@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const enlaces = document.querySelectorAll(window.bbpUtmSelector || '');
+    const postURL = window.bbpUtmPostURL || '';
+    const utmSource = window.bbpUtmSource || 'NoticiasBidcom';
+
+    if (enlaces.length > 0) {
+        enlaces.forEach(function (enlace) {
+            if (!enlace.href) return;
+
+            try {
+                const url = new URL(enlace.href, window.location.origin);
+                if (!url.searchParams.has('utm_source')) {
+                    url.searchParams.append('utm_source', utmSource);
+                    url.search += (url.search ? '&' : '?') + 'utm_medium=' + postURL;
+                    enlace.href = url.toString();
+                }
+            } catch (e) {
+                console.warn('Enlace inválido para UTM:', enlace.href);
+            }
+        });
+    }
+});
