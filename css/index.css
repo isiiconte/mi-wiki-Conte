@@ -21,7 +21,6 @@ body{
 
 .titulo{
     grid-area: TITULO;
-    font-size:20px;
 }
 .indice{
     grid-area: INDICE;
