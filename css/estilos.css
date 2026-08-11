@@ -47,22 +47,23 @@ header img {
 
 nav {
     grid-area: ASIDE;
-    font-size: 20px;
+    background-color: white;
+    font-size: 19px;
     border-right: 2px solid #D3D3D3;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-top: 10px;
 }
 nav a {
     color: #292929;
-    font-weight: bold;
+    font-weight: lighter;
     text-decoration: none;
 }
 
 nav a:hover {
     color: #b6e403;
-    font-weight: bolder;
+    font-weight: bold;
 }
 nav > ul {
     list-style-position: inside;
