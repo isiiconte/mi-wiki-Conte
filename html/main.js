@@ -1,3 +1,5 @@
+// ÍNDICE AUTOMÁTICO: genera un enlace por cada h2 de la página
+
 const indice = document.querySelector("#indice");
 const secciones = document.querySelectorAll("main section");
 
@@ -24,6 +26,9 @@ if (indice) {
         });
     });
 }
+
+// MODO OSCURO: alterna la clase modo-oscuro en el body
+
 const botonModo = document.querySelector("#modoOscuro");
 botonModo.addEventListener("click", function() {
     document.body.classList.toggle("modo-oscuro");
@@ -33,6 +38,8 @@ botonModo.addEventListener("click", function() {
         botonModo.textContent = "Modo oscuro";
     }
 });
+
+// TAMAÑO DE TEXTO: pone la clase texto-* en el main
 
 const botonesTamano = document.querySelectorAll(".tamanoTexto");
 const articulo = document.querySelector("main");
@@ -51,6 +58,8 @@ botonesTamano.forEach(function(boton) {
         boton.classList.add("seleccionado");
     });
 });
+
+// SECCIONES PLEGABLES: alterna la clase colapsada al tocar un h2
 const titulosSecciones = document.querySelectorAll("main section > h2");
 
 titulosSecciones.forEach(function(titulo) {
@@ -60,6 +69,8 @@ titulosSecciones.forEach(function(titulo) {
         seccion.classList.toggle("colapsada");
     });
 });
+
+// DISCUSIÓN: contador, validación y alta/baja de comentarios
 
 const formulario = document.querySelector("#formularioDiscusion");
 const nombre = document.querySelector("#nombreComentario");

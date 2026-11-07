@@ -243,18 +243,25 @@ body.modo-oscuro {
 .modo-oscuro footer a:hover {
     color: #b6e403;
 }
+
+main.texto-pequeno h1 { font-size: 26px; }
+main.texto-pequeno h2 { font-size: 22px; }
 main.texto-pequeno p,
 main.texto-pequeno li,
 main.texto-pequeno h3 {
     font-size: 14px;
 }
 
+main.texto-estandar h1 { font-size: 32px; }
+main.texto-estandar h2 { font-size: 28px; }
 main.texto-estandar p,
 main.texto-estandar li,
 main.texto-estandar h3 {
     font-size: 18px;
 }
 
+main.texto-grande h1 { font-size: 38px; }
+main.texto-grande h2 { font-size: 34px; }
 main.texto-grande p,
 main.texto-grande li,
 main.texto-grande h3 {
