@@ -45,11 +45,16 @@ header img {
     object-fit: cover;
 }
 
-nav {
+aside {
     grid-area: ASIDE;
     background-color: white;
-    font-size: 19px;
     border-right: 2px solid #D3D3D3;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+nav {
+    font-size: 19px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -145,4 +150,60 @@ footer ul {
 }
 footer li {
     display: inline;
+}
+
+.apariencia {
+     padding: 15px;
+    border-top: 2px solid #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.apariencia h3 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.apariencia p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.apariencia button, #formularioDiscusion button{
+    font-family: inherit;
+    font-weight: bold;
+    border: 1px solid #a8c900;
+    border-radius: 5px;
+    background-color: #b6e403;
+    color: #FFFFFF;
+    padding: 7px 10px;
+}
+.apariencia button:hover,
+#formularioDiscusion button:hover {
+    font-weight: bolder;
+    background-color: #15B433;
+}
+#seccionDiscusion {
+    border-top: 2px solid #D3D3D3;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+#formularioDiscusion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 600px;
+}
+#formularioDiscusion input,
+#formularioDiscusion textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 9px;
+    border: 1px solid #b8b8b8;
+    border-radius: 4px;
+    font: inherit;
 }

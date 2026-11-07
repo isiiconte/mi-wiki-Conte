@@ -3,6 +3,7 @@
 <html>
     <head><title>SM Entertainment</title>
     <link rel ="stylesheet" href="../css/estilos.css">
+    <script src="main.js" defer></script>
 </head>
     <body>
         <div class="pagina">
@@ -10,22 +11,22 @@
             <h1>NCITY</h1>
             <img src="../img/nctzen.png">
         </header>
-        
+<aside>
 <nav>
-    <ul>
-        <li><a href="#historia">Historia</a></li>
-
-        <li>
-            <a href="#artistas">Artistas activos</a>
-        <ul>
-            <li><a href="#grupos">Grupos</a></li>
-            <li><a href="#subunits">Sub-unidades</a></li>
-            <li><a href="#solistas">Solistas</a></li>
-        </ul>
-        </li>
-        <li><a href="#distribuidoras">Empresas distribuidoras</a></li>
+    <ul id="indice">
     </ul>
 </nav>
+<div class="apariencia">
+    <h3>Apariencia</h3>
+
+    <button id="modoOscuro">Modo oscuro</button>
+
+    <p>Tamaño del texto</p>
+    <button class="tamanoTexto" data-tamano="pequeno">Pequeño</button>
+    <button class="tamanoTexto" data-tamano="estandar">Estándar</button>
+    <button class="tamanoTexto" data-tamano="grande">Grande</button>
+</div>
+</aside>       
 <main>
 <div class="intro">
     <img class="imagen" src="../img/sment.jpg" alt="Logo de SM Entertainment">
@@ -33,6 +34,7 @@
     <p>SM Entertainment (en hangul, 에스엠엔터테인먼트), es una empresa de entretenimiento surcoreana, fundada en 1995 por Lee Soo-man. Es la compañía de varias celebridades de K-pop, con una gran cantidad de seguidores. SM ha liderado el Hallyu, también conocido como la ola coreana.
 Es la agencia de varios artistas surcoreanos como BoA, TVXQ, Super Junior, Girls' Generation, SHINee, EXO, Red Velvet, NCT, Aespa, entre otros. En Japón, SM Entertainment con Avex Trax cogestiona artistas como Ayumi Hamasaki, Namie Amuro y Koda Kumi, así como artistas de Johnny's Entertainment, Arashi y KAT-TUN. La compañía opera un sello discográfico, agencia de talentos, agencia de viajes, la productora de cine, compañía de producción y edicion de música, gestión de eventos y empresa productora de conciertos, así como una música editorial. Una compañía de entretenimiento destacado en Corea del Sur, la agencia está dentro del llamado "Big Three" (SM, JYP y YG), las 3 discográficas más grandes de Corea del Sur, debido a su fuerte participación en el mercado y en las operaciones internacionales. SM es reconocida por iniciar y liderar la llamada "Ola Hallyu" alrededor de Asia y del mundo.</p>
 </div>
+<section>
 <h2 id="historia">Historia</h2>
 <p>Después de graduarse de la Seoul National University y buscar su propia carrera como cantante, Lee Soo Man, encuestó a varios adolescentes sobre lo que querían ver en los grupos de música; es entonces cuando comenzó con el grupo de chicos H.O.T., y el grupo de chicas S.E.S. Ambos grupos se convirtió en éxito durante la década del 90. Poco después, Lee Soo Man creó otro grupo de chicos, el cual fue nombrado Shinhwa; el grupo alcanzó la misma popularidad y el éxito que los anteriores grupos.
 
@@ -43,6 +45,8 @@ En los años siguientes, algunas de sus empresas más nuevas, como Isak N Jiyeon
 La agencia más tarde descubrió nuevos éxitos como: BoA y DBSK. Además de la comercialización al público nacional, los dos artistas se han promovido agresivamente en Japón. como la parte de la empresa reciente (blue ocean strategy) para exportar el talento coreano a los grandes mercados de la música en el extranjero.
 
 SM estableció una empresa conjunta con Avex Trax para liberar la música de BoA, DBSK, CSJH The Grace, Super Junior y TRAX en Japón. Super Junior y Zhang Li Yin se han promovido fuertemente en China, Taiwán, Hong Kong y otras comunidades que hablan chino, el la sub-unidad de Super Junior, Super Junior-M que canta en chino mandarín, fue creado para el público objetivo que habla chino. Así logrando entrar en el mercado internacional en Asia</p>
+</section>
+<section>
 <h2 id="artistas">Artistas activos</h2>
 <h3 id="grupos">Grupos</h3>
 <ul><li>TVXQ (DBSK) (2003)</li>
@@ -99,6 +103,8 @@ SM estableció una empresa conjunta con Avex Trax para liberar la música de BoA
 <li>Tae Yong (2023)</li>
 <li>Ten (2024)</li>
 </ul>
+</section>
+<section>
 <h2 id="distribuidoras">Empresas distribuidoras</h2>
 <h3>Corea del Sur</h3>
 <ul><li>Seorabul Records (1995–1998)</li>
@@ -144,6 +150,27 @@ SM estableció una empresa conjunta con Avex Trax para liberar la música de BoA
     <li>Universal Music (Girls' Generation, lanzamientos japoneses de SHINee) (2010–presente)</li>
     <li>Warner Music (lanzamientos japoneses de SHINee) (2010–2013) (con licencia de EMI Music)</li>
 </ul>
+</section>
+<section id="seccionDiscusion">
+    <h2 id="discusion">Discusion</h2>
+    <p>Háganos saber su opinión sobre la página.</p>
+    <form id="formularioDiscusion">
+        <label for="nombreComentario">Nombre:</label>
+        <input type="text" id="nombreComentario"
+            name="nombre" placeholder="Escribí tu nombre">
+
+        <label for="textoComentario">Comentario:</label>
+        <textarea id="textoComentario" name="comentario"
+            maxlength="200" rows="4"
+            placeholder="Escribí tu comentario (entre 10 y 200 caracteres)"></textarea>
+
+        <p id="contadorCaracteres">0 / 200</p>
+
+        <button type="submit">Publicar comentario</button>
+    </form>
+    <p id="mensajeDiscusion"></p>
+    <ul id="listaComentarios"></ul>
+</section>
 </main>
 <footer>
 <ul><li><a href="index.html">NCT</a></li>
