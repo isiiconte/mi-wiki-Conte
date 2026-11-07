@@ -60,3 +60,46 @@ titulosSecciones.forEach(function(titulo) {
         seccion.classList.toggle("colapsada");
     });
 });
+
+const formulario = document.querySelector("#formularioDiscusion");
+const nombre = document.querySelector("#nombreComentario");
+const comentario = document.querySelector("#textoComentario");
+const contador = document.querySelector("#contadorCaracteres");
+const lista = document.querySelector("#listaComentarios");
+const mensaje = document.querySelector("#mensajeDiscusion");
+comentario.addEventListener("input", function() {
+    contador.textContent = comentario.value.length + " / 200";
+});
+formulario.addEventListener("submit", function(evento) {
+    evento.preventDefault();
+    nombre.classList.remove("error");
+    comentario.classList.remove("error");
+if (nombre.value.trim() === "") {
+    nombre.classList.add("error");
+    mensaje.textContent = "Ingresá tu nombre.";
+    return;
+}
+
+if (comentario.value.trim().length < 10 || comentario.value.length > 200) {
+    comentario.classList.add("error");
+    mensaje.textContent = "El comentario debe tener entre 10 y 200 caracteres.";
+    return;
+}
+    const nuevo = document.createElement("li");
+    nuevo.textContent = nombre.value + ": " + comentario.value;
+
+    const borrar = document.createElement("button");
+    borrar.textContent = "Borrar";
+
+    borrar.addEventListener("click", function() {
+        nuevo.remove();
+    });
+    nuevo.appendChild(borrar);
+    lista.appendChild(nuevo);
+
+    formulario.reset();
+    contador.textContent = "0 / 200";
+    mensaje.classList.remove("error");
+    mensaje.textContent = "¡Comentario publicado!";
+});
+

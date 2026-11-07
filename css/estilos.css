@@ -180,6 +180,21 @@ footer li {
     color: white;
     padding: 7px 10px;
 }
+#listaComentarios button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 1px solid #a8c900;
+    border-radius: 5px;
+    background-color: #b6e403;
+    color: white;
+    padding: 7px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#listaComentarios button:hover {
+    background-color: #15B433;
+}
 .apariencia button:hover,
 #formularioDiscusion button:hover {
     font-weight: bolder;
@@ -266,4 +281,14 @@ main section.colapsada h2::after {
 }
 main section.colapsada > form#formularioDiscusion {
     display: none;
+}
+.error {
+    border: 2px solid red !important;
+}
+#listaComentarios li {
+    margin-bottom: 15px;
+}
+
+#listaComentarios button {
+    margin-left: 10px;
 }
