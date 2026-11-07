@@ -250,3 +250,20 @@ main.texto-grande h3 {
     color: white;
     font-weight: bold;
 }
+main section.colapsada > :not(h2) {
+    display: none;
+}
+main section h2 {
+    cursor: pointer;
+}
+main section h2::after {
+    content: " ▼";
+    font-size: 14px;
+}
+
+main section.colapsada h2::after {
+    content: " ▶";
+}
+main section.colapsada > form#formularioDiscusion {
+    display: none;
+}

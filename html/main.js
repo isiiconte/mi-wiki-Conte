@@ -51,3 +51,12 @@ botonesTamano.forEach(function(boton) {
         boton.classList.add("seleccionado");
     });
 });
+const titulosSecciones = document.querySelectorAll("main section > h2");
+
+titulosSecciones.forEach(function(titulo) {
+    titulo.addEventListener("click", function() {
+        const seccion = titulo.parentElement;
+
+        seccion.classList.toggle("colapsada");
+    });
+});
