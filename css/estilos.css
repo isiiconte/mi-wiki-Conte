@@ -177,7 +177,7 @@ footer li {
     border: 1px solid #a8c900;
     border-radius: 5px;
     background-color: #b6e403;
-    color: #FFFFFF;
+    color: white;
     padding: 7px 10px;
 }
 .apariencia button:hover,
@@ -206,4 +206,47 @@ footer li {
     border: 1px solid #b8b8b8;
     border-radius: 4px;
     font: inherit;
+}
+body.modo-oscuro {
+    background-color: #202124;
+    color: #f2f0ef;
+}
+.modo-oscuro header,
+.modo-oscuro main,
+.modo-oscuro aside,
+.modo-oscuro footer {
+    background-color: #303134;
+    color: #f2f0ef;
+}
+
+.modo-oscuro nav a,
+.modo-oscuro footer a {
+    color: #f2f0ef;
+}
+
+.modo-oscuro nav a:hover,
+.modo-oscuro footer a:hover {
+    color: #b6e403;
+}
+main.texto-pequeno p,
+main.texto-pequeno li,
+main.texto-pequeno h3 {
+    font-size: 14px;
+}
+
+main.texto-estandar p,
+main.texto-estandar li,
+main.texto-estandar h3 {
+    font-size: 18px;
+}
+
+main.texto-grande p,
+main.texto-grande li,
+main.texto-grande h3 {
+    font-size: 22px;
+}
+.apariencia button.seleccionado {
+    background-color:  #27ee4b;
+    color: white;
+    font-weight: bold;
 }
