@@ -43,15 +43,16 @@ botonModo.addEventListener("click", function() {
 
 const botonesTamano = document.querySelectorAll(".tamanoTexto");
 const articulo = document.querySelector("main");
-document.querySelector('[data-tamano="estandar"]').classList.add("seleccionado");
-
 botonesTamano.forEach(function(boton) {
-    boton.addEventListener("click", function() {
+    if (boton.dataset.tamano === "estandar") {
+        boton.classList.add("seleccionado");
+    }
 
+    boton.addEventListener("click", function() {
         articulo.classList.remove("texto-pequeno", "texto-estandar", "texto-grande");
 
-        botonesTamano.forEach(function(boton) {
-            boton.classList.remove("seleccionado");
+        botonesTamano.forEach(function(b) {
+            b.classList.remove("seleccionado");
         });
 
         articulo.classList.add("texto-" + boton.dataset.tamano);
@@ -96,17 +97,21 @@ if (comentario.value.trim().length < 10 || comentario.value.length > 200) {
     mensaje.textContent = "El comentario debe tener entre 10 y 200 caracteres.";
     return;
 }
-    const nuevo = document.createElement("li");
-    nuevo.textContent = nombre.value + ": " + comentario.value;
-
+    const nuevoLi = document.createElement("li");
+    const strongNombre = document.createElement("strong");
+    strongNombre.textContent = nombre.value + ":";
+    const pComentario = document.createElement("p");
+    pComentario.textContent = comentario.value;
     const borrar = document.createElement("button");
     borrar.textContent = "Borrar";
 
     borrar.addEventListener("click", function() {
-        nuevo.remove();
+        nuevoLi.remove();
     });
-    nuevo.appendChild(borrar);
-    lista.appendChild(nuevo);
+    nuevoLi.appendChild(strongNombre);
+    nuevoLi.appendChild(pComentario);
+    nuevoLi.appendChild(borrar);
+    lista.appendChild(nuevoLi);
 
     formulario.reset();
     contador.textContent = "0 / 200";

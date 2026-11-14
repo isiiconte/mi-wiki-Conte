@@ -171,34 +171,30 @@ footer li {
     font-size: 15px;
 }
 
-.apariencia button, #formularioDiscusion button{
+.apariencia button, #formularioDiscusion button,
+#listaComentarios button{
     font-family: inherit;
     font-weight: bold;
     border: 1px solid #a8c900;
     border-radius: 5px;
     background-color: #b6e403;
-    color: white;
+    color: #293133;;
     padding: 7px 10px;
+    cursor: pointer;
 }
 #listaComentarios button {
-    font-family: inherit;
-    font-weight: bold;
-    border: 1px solid #a8c900;
-    border-radius: 5px;
-    background-color: #b6e403;
-    color: white;
-    padding: 7px 10px;
     margin-left: 10px;
-    cursor: pointer;
 }
 
 #listaComentarios button:hover {
     background-color: #15B433;
+    color: white
 }
 .apariencia button:hover,
 #formularioDiscusion button:hover {
     font-weight: bolder;
     background-color: #15B433;
+    color: white;
 }
 #seccionDiscusion {
     border-top: 2px solid #D3D3D3;
@@ -254,10 +250,10 @@ main.texto-pequeno h3 {
 
 main.texto-estandar h1 { font-size: 32px; }
 main.texto-estandar h2 { font-size: 28px; }
+main.texto-estandar h3 { font-size: 20px; }
 main.texto-estandar p,
-main.texto-estandar li,
-main.texto-estandar h3 {
-    font-size: 18px;
+main.texto-estandar li {
+    font-size: 16px;
 }
 
 main.texto-grande h1 { font-size: 38px; }
@@ -269,7 +265,7 @@ main.texto-grande h3 {
 }
 .apariencia button.seleccionado {
     background-color:  #27ee4b;
-    color: white;
+    color: #293133;
     font-weight: bold;
 }
 main section.colapsada > :not(h2) {
@@ -292,10 +288,11 @@ main section.colapsada > form#formularioDiscusion {
 .error {
     border: 2px solid red !important;
 }
-#listaComentarios li {
-    margin-bottom: 15px;
+
+#listaComentarios{
+    list-style: none;
 }
 
-#listaComentarios button {
-    margin-left: 10px;
+#listaComentarios li {
+    margin-bottom: 15px;
 }
